@@ -1,13 +1,17 @@
+require('pry')
 
 def pingpong(number)
   array = []
   x = 0
   while (x < number)
-    x = x + 1
-    array.push(x)
-  end
-  array  
+    x += 1
+    if x%3 == 0
+      array.push("ping")
+    elsif x%5 == 0
+      array.push("pong")
+    else 
+      array.push(x)
+    end 
+  end 
+  return array
 end
-
-
-Ophelia Swen <ophelia.swen@gmail.com>
